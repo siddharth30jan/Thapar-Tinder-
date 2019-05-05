@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1">
+        <meta charset="utf-8">
+        <title>Tinder</title>
+
+        <!-- Manifest -->
+        <link rel="manifest" href="manifest.json">
+
+        <!-- Chrome for Android theme color -->
+        <meta name="theme-color" content="#F81894">
+
+        <!-- Add to homescreen for Chrome on Android -->
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="application-name" content="Tinder">
+        <link rel="icon" sizes="192x192" href="images/profile/logo.png">
+
+        <!-- Add to homescreen for Safari on iOS -->
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="apple-mobile-web-app-title" content="Tinder">
+        <link rel="apple-touch-icon" href="images/profile/logo.png">
+
+        <!-- Tile for Win8 -->
+        <meta name="msapplication-TileColor" content="#F81894">
+        <meta name="msapplication-TileImage" content="images/profile/logo.png">
+        <link rel="stylesheet" type="text/css" href="css/login.css">
+        <script>
+          function vis(){
+            var x = document.getElementById("logpwd");
+            if (x.type === "password") {
+                x.type = "text";
+                document.getElementById("vis").src="img/close-eye.png";
+                x.style.marginTop="-2px";
+            } else {
+                x.type = "password";
+                document.getElementById("vis").src="img/open-eye.png";
+            }
+          }
+        </script>        
+    </head>
+    <body>
+        <div id="login-box">
+          <div class="left">
+            <h1>Log in</h1>
+            <p class="unit">with <b>thapar.edu</b></p>
+            <input type="text" name="email" placeholder="E-mail" id="logemail"/>
+            <img id="vis" src="img/open-eye.png" onclick="vis()">
+            <input type="password" name="password" placeholder="Password" id="logpwd"/>
+            <div  id="msg-email">*Email password pair incorrect</div>
+            <div id="submit" onclick="lgin()">LOGIN</div>
+          </div>
+        </div>
+        <div class="band"><h2>Not a member yet? <a href="./signup.html">SIGNUP</a></h2></div>
+        <a href="https://github.com/llStringll" target="_blank"><div id="me"><hr>Created by <i>SMOKIIZ</i> for Thapar University</div></a>
+        <div id="check-back"></div>
+        <div id="check"><div class="loading"></div></div>
+    <script src="js/main.js"></script> 
+    </body>
+</html>
